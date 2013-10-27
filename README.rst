@@ -23,12 +23,9 @@ Create unison profiles for the folders you want to
 synchronize and optionally add scripts to ``/etc/cron.hourly`` to automatically
 run the synchronisation with anacron::
 
-  #/bin/sh
-  # /etc/cron.hourly/65-unison-sample
-  #run script with user privileges
-  su username
-  # call the wrapper script and pass the profile "sample"
-  /path/to/unisonotify.py sample
+	#!/bin/sh
+	# run unison sync as user foo for profile bar
+	sudo -u foo -H /home/foo/.local/bin/Unisonotify/unisonotify.py bar
 
 License
 ========
