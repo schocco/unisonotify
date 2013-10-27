@@ -37,4 +37,11 @@ if __name__ == "__main__":
     # call unison and wait for completion
     exitcode = run_unison("documents")
     # display notification that sync was completed with exit code X
-    notify("Synchronization completed", "Unison exited with code %d" % exitcode)
+    if exitcode == 0:
+        notify("Synchronization completed", "Unison successfully completed synchronization")
+    elif exitcoe == 1:
+        notify("Synchronization completed", "Some files were skipped, but all file transfers were successful")
+    elif exitcode == 2:
+        notify("Synchronization completed with failures", "Non-fatal failures occurred during file transfer")
+    elif exitcode == 3:
+        notify("Synchronization failed", "A fatal error occurred, or the execution was interrupted")
