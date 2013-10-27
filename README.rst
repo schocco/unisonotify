@@ -7,6 +7,18 @@ to indicate when unison started and how it completed.
 
 The script can be called via cron or anacron to automate data synchronisation.
 
+
+Preview
+=========
+
+.. figure:: preview1.png
+
+   Preview 1 (Ubuntu)
+
+.. figure:: preview2.png
+
+   Preview 2 (Ubuntu)
+
 Installation
 =============
 
